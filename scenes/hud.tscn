@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://lh6n6tgkops2"]
+
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_5421h"]
+
+[node name="HUD" type="Node2D"]
+script = ExtResource("1_5421h")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LabelScore" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Score: 0"
