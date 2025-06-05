@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://bcrpbh5if3f6p"]
 
-[ext_resource type="Script" path="res://scripts/cat.gd" id="1_vn74p"]
+[ext_resource type="Script" uid="uid://dcnh303xlk74i" path="res://scripts/cat.gd" id="1_vn74p"]
 [ext_resource type="Texture2D" uid="uid://dhpeauolvw4t1" path="res://assets/sprites/Cat_85_Animations/Cat_Ginger.png" id="2_4ekyw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_unrhb"]
@@ -207,15 +207,25 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lpohp"]
-size = Vector2(18, 16)
+size = Vector2(18, 15)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_51efg"]
 radius = 12.0
 
 [node name="Cat" type="CharacterBody2D"]
-position = Vector2(2, -15)
+position = Vector2(0, -13)
 collision_mask = 2
 script = ExtResource("1_vn74p")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(5, -49)
+limit_left = 0
+limit_top = -100
+limit_smoothed = true
+position_smoothing_speed = 1.0
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 3.0
+editor_draw_limits = true
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 position = Vector2(8, -1)
@@ -225,7 +235,7 @@ autoplay = "idle"
 frame_progress = 0.597271
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(9, 7)
+position = Vector2(9, 6.5)
 shape = SubResource("RectangleShape2D_lpohp")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
