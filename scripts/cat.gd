@@ -76,3 +76,7 @@ func reset_player() -> void:
 	can_control = true
 	global_position = reset_position
 	velocity = Vector2.ZERO
+
+
+func _on_door_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

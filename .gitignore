@@ -1,3 +1,5 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+levels/testbed_level.tscn
+levels/testbed_level.tscn

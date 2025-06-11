@@ -5,7 +5,7 @@ signal is_Active
 func _physics_process(delta: float) -> void:
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
-		if body.name == "Cat":
+		if body.name == "Rat1":
 			$AnimationPlayer.play("active")
 			await $AnimationPlayer.animation_finished
 			$AnimationPlayer.play("active idle")

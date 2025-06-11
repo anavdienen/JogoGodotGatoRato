@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq44qtwa2v3g2"
-path="res://.godot/imported/feixe_luz_poste.png-ebe41f590cf9b538bfda15337b1d5636.ctex"
+uid="uid://cqte4gqojseb2"
+path="res://.godot/imported/sun-light-overlay-png.webp-856eff8fdbed74f818ad2638a7de9683.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/feixe_luz_poste.png"
-dest_files=["res://.godot/imported/feixe_luz_poste.png-ebe41f590cf9b538bfda15337b1d5636.ctex"]
+source_file="res://assets/sun-light-overlay-png.webp"
+dest_files=["res://.godot/imported/sun-light-overlay-png.webp-856eff8fdbed74f818ad2638a7de9683.ctex"]
 
 [params]
 
