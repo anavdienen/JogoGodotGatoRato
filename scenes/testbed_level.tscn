@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://cg0w8jo6xyjmn"]
+[gd_scene load_steps=24 format=4 uid="uid://byn1w7rk7c5s8"]
 
 [ext_resource type="Texture2D" uid="uid://ckh4e1wcg6ors" path="res://assets/sprites/kenney_pixel-platformer-blocks/Tilemap/rock.png" id="2_eatx4"]
 [ext_resource type="PackedScene" uid="uid://dfh65iyl4hmqe" path="res://scenes/Coin.tscn" id="3_anqm3"]
