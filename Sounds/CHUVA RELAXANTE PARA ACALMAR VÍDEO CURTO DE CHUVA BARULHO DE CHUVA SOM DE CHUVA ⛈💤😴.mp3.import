@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ml1jqr46kpf6"
+path="res://.godot/imported/CHUVA RELAXANTE PARA ACALMAR VÍDEO CURTO DE CHUVA BARULHO DE CHUVA SOM DE CHUVA ⛈💤😴.mp3-dbf0a16c863801ed0263d1047dc1b1fb.mp3str"
+
+[deps]
+
+source_file="res://Sounds/CHUVA RELAXANTE PARA ACALMAR VÍDEO CURTO DE CHUVA BARULHO DE CHUVA SOM DE CHUVA ⛈💤😴.mp3"
+dest_files=["res://.godot/imported/CHUVA RELAXANTE PARA ACALMAR VÍDEO CURTO DE CHUVA BARULHO DE CHUVA SOM DE CHUVA ⛈💤😴.mp3-dbf0a16c863801ed0263d1047dc1b1fb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

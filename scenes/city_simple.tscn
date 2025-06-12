@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=4 uid="uid://c3umy4s482oln"]
+[gd_scene load_steps=53 format=4 uid="uid://c3umy4s482oln"]
 
 [ext_resource type="Script" uid="uid://ct5bk5ocdj2gt" path="res://scripts/Global.gd" id="1_167y3"]
 [ext_resource type="PackedScene" uid="uid://cj7xsqbxpokj5" path="res://Entities/camera.tscn" id="2_8i85s"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://bwyypvyul06cv" path="res://assets/sprites/halo/drop.png" id="21_mogu4"]
 [ext_resource type="Script" uid="uid://brcv3rfe5s113" path="res://levels/rain_trigger.gd" id="22_tek3q"]
 [ext_resource type="Script" uid="uid://dn7na0rxggmdb" path="res://levels/area_2d.gd" id="23_mbpg8"]
+[ext_resource type="AudioStream" uid="uid://ml1jqr46kpf6" path="res://Sounds/CHUVA RELAXANTE PARA ACALMAR VÍDEO CURTO DE CHUVA BARULHO DE CHUVA SOM DE CHUVA ⛈💤😴.mp3" id="23_y3ahg"]
 [ext_resource type="Script" uid="uid://c2fppgs0e2ar5" path="res://levels/area_2d_2.gd" id="24_btsyj"]
 [ext_resource type="PackedScene" uid="uid://buyfqlg82eci8" path="res://Entities/portal.tscn" id="25_8i85s"]
 
@@ -3658,10 +3659,18 @@ script = ExtResource("22_tek3q")
 rain_particles = NodePath("../CPUParticles2D")
 player = NodePath("../Cat")
 hud_path = NodePath("../Area2D2/HUD")
+rain_sound_player = NodePath("RainSound")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RainTrigger"]
 position = Vector2(1832, 43.25)
 shape = SubResource("RectangleShape2D_amv5h")
+
+[node name="RainSound" type="AudioStreamPlayer2D" parent="RainTrigger"]
+scale = Vector2(500, 500)
+stream = ExtResource("23_y3ahg")
+max_distance = 5000.0
+attenuation = 1e-05
+parameters/looping = false
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("23_mbpg8")
