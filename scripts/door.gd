@@ -18,3 +18,7 @@ func _on_lever_is_active() -> void:
 	await $AnimationPlayer.animation_finished
 	$AnimationPlayer.play("opened")
 	is_door_opened = true # Define que a porta está aberta após a animação
+
+
+func _on_lever_2_is_active() -> void:
+	pass # Replace with function body.

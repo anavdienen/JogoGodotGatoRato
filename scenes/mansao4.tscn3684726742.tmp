@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://b674a0vj0j58a"]
+[gd_scene load_steps=14 format=4 uid="uid://b674a0vj0j58a"]
 
 [ext_resource type="TileSet" uid="uid://dym2ycg4snntr" path="res://scenes/mansao1.tres" id="1_srqcj"]
 [ext_resource type="PackedScene" uid="uid://bcrpbh5if3f6p" path="res://Entities/cat.tscn" id="2_1up36"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://bbfaq75khek8d" path="res://Entities/lever.tscn" id="7_07g4p"]
 [ext_resource type="PackedScene" uid="uid://c873g2ny0xvtw" path="res://Entities/door.tscn" id="8_3qjyg"]
 [ext_resource type="Script" uid="uid://dyggdca63t2f1" path="res://scripts/cutscene.gd" id="9_3qjyg"]
-[ext_resource type="Script" uid="uid://cj50sut7ttduk" path="res://scripts/fala.gd" id="10_3ae15"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2e2wi"]
 texture = ExtResource("2_07g4p")
@@ -342,10 +341,7 @@ sources/1 = SubResource("TileSetAtlasSource_2e2wi")
 sources/2 = SubResource("TileSetAtlasSource_axfwn")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ae15"]
-size = Vector2(61, 13)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_su8xr"]
-size = Vector2(0.479999, 3.7)
+size = Vector2(70, 36)
 
 [node name="mansao3" type="Node2D"]
 metadata/_edit_vertical_guides_ = [-175.0, -176.0, 304.0]
@@ -363,7 +359,7 @@ tile_set = ExtResource("1_srqcj")
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 position = Vector2(-47, 64)
 scale = Vector2(0.995, 0.995)
-tile_map_data = PackedByteArray("AAD5/wYAAgAKAAoAAAABAAYAAgAKAAoAAAABAAUAAgALAAwAAAD5/wUAAgALAAwAAAD5/wAAAgABAAkAAAD5/wEAAgABAAkAAAD6/wAAAgACAAkAAAD6/wEAAgACAAkAAAD7/wAAAgADAAkAAAD7/wEAAgADAAkAAAD8/wAAAgABAAkAAAD8/wEAAgABAAkAAAD9/wAAAgACAAkAAAD9/wEAAgACAAkAAAD+/wAAAgADAAkAAAD+/wEAAgADAAkAAAD//wAAAgABAAkAAAD//wEAAgABAAkAAAAAAAAAAgACAAkAAAAAAAEAAgACAAkAAAABAAAAAgADAAkAAAABAAEAAgADAAkAAAACAAAAAgABAAkAAAACAAEAAgABAAkAAAADAAAAAgACAAkAAAADAAEAAgACAAkAAAAEAAAAAgADAAkAAAAEAAEAAgADAAkAAAAFAAAAAgAFAAkAAAAFAAIAAgAFAAoAAAABAAQAAgAIAAoAAAD5/wQAAgAHAAoAAAASAPn/AgAKAA4AAAATAPn/AgALAA4AAAAUAPn/AgAMAA4AAAAFAAEAAgAFAAkAAAAGAAEAAgAFAAoAAAAGAAAAAgAFAAkAAAD8/wQAAgAIAAwAAAD8/wUAAgAIAA0AAAD9/wQAAgAJAAwAAAD9/wUAAgAJAA0AAAD7/wQAAgAHAAwAAAD7/wUAAgAHAA0AAAA=")
+tile_map_data = PackedByteArray("AAD5/wYAAgAKAAoAAAABAAYAAgAKAAoAAAABAAUAAgALAAwAAAD5/wUAAgALAAwAAAD5/wAAAgABAAkAAAD5/wEAAgABAAkAAAD6/wAAAgACAAkAAAD6/wEAAgACAAkAAAD7/wAAAgADAAkAAAD7/wEAAgADAAkAAAD8/wAAAgABAAkAAAD8/wEAAgABAAkAAAD9/wAAAgACAAkAAAD9/wEAAgACAAkAAAD+/wAAAgADAAkAAAD+/wEAAgADAAkAAAD//wAAAgABAAkAAAD//wEAAgABAAkAAAAAAAAAAgACAAkAAAAAAAEAAgACAAkAAAABAAAAAgADAAkAAAABAAEAAgADAAkAAAACAAAAAgABAAkAAAACAAEAAgABAAkAAAADAAAAAgACAAkAAAADAAEAAgACAAkAAAAEAAAAAgADAAkAAAAEAAEAAgADAAkAAAAFAAAAAgAFAAkAAAAFAAIAAgAFAAoAAAD8/wQAAgAHAAwAAAD8/wUAAgAHAA0AAAD9/wQAAgAIAAwAAAD9/wUAAgAIAA0AAAD+/wQAAgAJAAwAAAD+/wUAAgAJAA0AAAABAAQAAgAIAAoAAAD5/wQAAgAHAAoAAAASAPn/AgAKAA4AAAATAPn/AgALAA4AAAAUAPn/AgAMAA4AAAAFAAEAAgAFAAkAAAAGAAEAAgAFAAoAAAAGAAAAAgAFAAkAAAA=")
 tile_set = SubResource("TileSet_38rcd")
 
 [node name="props" type="TileMapLayer" parent="."]
@@ -374,7 +370,6 @@ tile_set = ExtResource("1_srqcj")
 [node name="Rat1" parent="." instance=ExtResource("4_pcn7a")]
 position = Vector2(39, -18)
 collision_mask = 2
-cat_node = NodePath("../Cat")
 
 [node name="Cat" parent="." instance=ExtResource("2_1up36")]
 position = Vector2(46, -16)
@@ -387,39 +382,20 @@ limit_right = 304
 limit_bottom = 192
 
 [node name="Lever" parent="." instance=ExtResource("7_07g4p")]
-position = Vector2(248, 64)
+position = Vector2(80, 176)
 
 [node name="Door" parent="." instance=ExtResource("8_3qjyg")]
 position = Vector2(-4, -1)
 scale = Vector2(0.7, 0.7)
-nextScene = "res://scenes/mansao5.tscn"
 
 [node name="Cutscene" type="Area2D" parent="."]
 script = ExtResource("9_3qjyg")
 hud_path = NodePath("HUD")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cutscene"]
-position = Vector2(-86.5, 153.5)
+position = Vector2(-98, 142)
 shape = SubResource("RectangleShape2D_3ae15")
 
 [node name="HUD" type="CanvasLayer" parent="Cutscene"]
 
-[node name="Fala" type="Area2D" parent="."]
-position = Vector2(737, -4)
-script = ExtResource("10_3ae15")
-player = NodePath("../Cat")
-hud_path = NodePath("HUD")
-rat_node_path = NodePath("../Rat1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fala"]
-light_mask = 2
-position = Vector2(-579, 66)
-scale = Vector2(50, 10)
-shape = SubResource("RectangleShape2D_su8xr")
-debug_color = Color(0.633726, 0.526622, 0.0958235, 0.42)
-
-[node name="HUD" type="CanvasLayer" parent="Fala"]
-
 [connection signal="is_Active" from="Lever" to="Door" method="_on_lever_is_active"]
-[connection signal="body_entered" from="Cutscene" to="Cutscene" method="_on_body_entered"]
-[connection signal="body_entered" from="Fala" to="Fala" method="_on_body_entered"]

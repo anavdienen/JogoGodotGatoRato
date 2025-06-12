@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://vkr77vhufqtx"]
+[gd_scene load_steps=18 format=3 uid="uid://vkr77vhufqtx"]
 
 [ext_resource type="Script" uid="uid://78ati6jlss6i" path="res://scripts/rat1.gd" id="1_ktdk2"]
 [ext_resource type="Texture2D" uid="uid://b7qrutwch8xv8" path="res://assets/sprites/6 Rat 2/Idle.png" id="2_ivu58"]
 [ext_resource type="Texture2D" uid="uid://cqhqlq5tu8aen" path="res://assets/sprites/6 Rat 2/Walk.png" id="3_0gqve"]
+[ext_resource type="Texture2D" uid="uid://d07mo1sg00cov" path="res://assets/sprites/6 Rat 2/sleep.png" id="4_ivu58"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qah24"]
 atlas = ExtResource("2_ivu58")
@@ -39,6 +40,14 @@ region = Rect2(64, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_o44t1"]
 atlas = ExtResource("3_0gqve")
 region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gqve"]
+atlas = ExtResource("4_ivu58")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mvin"]
+atlas = ExtResource("4_ivu58")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_biyr1"]
 animations = [{
@@ -83,6 +92,17 @@ animations = [{
 "loop": true,
 "name": &"run",
 "speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gqve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mvin")
+}],
+"loop": true,
+"name": &"sleeping",
+"speed": 3.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seiel"]
@@ -95,8 +115,6 @@ script = ExtResource("1_ktdk2")
 sprite_frames = SubResource("SpriteFrames_biyr1")
 animation = &"idle"
 autoplay = "idle"
-frame = 2
-frame_progress = 0.725127
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 12)

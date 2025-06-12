@@ -95,3 +95,4 @@ func enable_control() -> void:
 	set_physics_process(true)
 	can_control = true
 	print("Rato: Controle habilitado!")
+	
