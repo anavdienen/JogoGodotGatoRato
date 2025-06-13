@@ -28,7 +28,7 @@ tile_set = ExtResource("2_iyu08")
 position = Vector2(-2, -36)
 
 [node name="Camera" parent="." instance=ExtResource("3_hbwsu")]
-zoom = Vector2(1.4, 1.4)
+zoom = Vector2(2.8, 2.8)
 limit_left = -47
 limit_top = -250
 limit_right = 465

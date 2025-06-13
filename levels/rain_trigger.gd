@@ -6,7 +6,6 @@ extends Area2D
 @export var player: NodePath
 @export var thought_label: NodePath
 @export var hud_path: NodePath
-@export var rain_sound_player: NodePath
 
 const DIALOG_SCREEN: PackedScene = preload("res://dialog/dialog_screen.tscn")
 
@@ -27,18 +26,15 @@ var rain
 var player_node
 var label_node
 var dialog_played := false
-var rain_sound_node
 
 func _ready():
 	rain = get_node(rain_particles)
 	player_node = get_node(player)
 	label_node = get_node(thought_label)
-	rain_sound_node = get_node(rain_sound_player)
 
 func _on_body_entered(body):
 	if body == player_node:
 		rain.emitting = true
-		rain_sound_node.play()
 
 		if not dialog_played:
 			var hud = get_node(hud_path)

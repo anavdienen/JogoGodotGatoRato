@@ -77,9 +77,5 @@ func _on_body_entered(body: Node2D) -> void:
 
 # Função chamada quando o diálogo termina
 func _on_dialog_finished():
-	# Reabilita o movimento do Gato e do Rato
-	if is_instance_valid(player_node):
-		player_node.can_move = true
-	if is_instance_valid(rat_node): # Usa a variável can_move do rato
-		rat_node.can_move = true
+	get_tree().change_scene_to_file("res://scenes/credits.tscn")
 	

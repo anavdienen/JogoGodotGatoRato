@@ -3466,7 +3466,7 @@ metadata/_edit_vertical_guides_ = [3359.0, 3348.0]
 
 [node name="Camera" parent="." instance=ExtResource("2_vfaas")]
 position = Vector2(3023, -51)
-zoom = Vector2(1.4, 1.4)
+zoom = Vector2(2.8, 2.8)
 limit_right = 3350
 limit_bottom = 250
 position_smoothing_enabled = false

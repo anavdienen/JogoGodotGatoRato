@@ -1,0 +1,117 @@
+[gd_scene load_steps=8 format=3 uid="uid://k520x7fnrrhw"]
+
+[ext_resource type="Texture2D" uid="uid://bfsur1ja25eus" path="res://assets/Fundo.png" id="1_0l5e0"]
+[ext_resource type="Script" uid="uid://beioi2b61wlnl" path="res://scripts/title_scren.gd" id="1_m78ga"]
+[ext_resource type="Texture2D" uid="uid://dx6barmppuuac" path="res://assets/sprites/Cat_85_Animations/Cat_Ginger_Logo.png" id="2_lrpek"]
+[ext_resource type="Theme" uid="uid://3r7tf2fui5ai" path="res://button.tres" id="4_0o4cs"]
+[ext_resource type="Texture2D" uid="uid://by3maaw3kljb3" path="res://assets/Logo4_teste1.png" id="4_2h7t6"]
+[ext_resource type="Texture2D" uid="uid://dai3dn0k3uo3o" path="res://assets/sprites/6 Rat 2/Rato.png" id="4_g6b64"]
+[ext_resource type="Texture2D" uid="uid://bwyypvyul06cv" path="res://assets/sprites/halo/drop.png" id="7_t7cmj"]
+
+[node name="TitleScren" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m78ga")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 2
+offset_top = -504.0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_0l5e0")
+expand_mode = 4
+
+[node name="gato" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 688.0
+offset_top = 420.0
+offset_right = 844.0
+offset_bottom = 566.0
+texture = ExtResource("2_lrpek")
+expand_mode = 2
+flip_h = true
+
+[node name="rato" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 351.0
+offset_top = 439.0
+offset_right = 553.0
+offset_bottom = 537.0
+texture = ExtResource("4_g6b64")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="game_logo" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 179.0
+offset_top = -298.0
+offset_right = 994.0
+offset_bottom = 517.0
+texture = ExtResource("4_2h7t6")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.0987654
+anchor_right = 1.0
+anchor_bottom = 0.901235
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="start_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_0o4cs")
+text = "START"
+
+[node name="control_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_0o4cs")
+text = "CONTROLS"
+
+[node name="credits_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_0o4cs")
+text = "CREDITS"
+
+[node name="quit_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_0o4cs")
+text = "QUIT GAME
+"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(1382, 100)
+scale = Vector2(1.5, 1.5)
+amount = 1809
+texture = ExtResource("7_t7cmj")
+emission_shape = 3
+emission_rect_extents = Vector2(2000, 200)
+direction = Vector2(1, 10)
+spread = 119.54
+gravity = Vector2(200, 980)
+scale_amount_min = 0.0
+scale_amount_max = 0.6
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/start_btn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/control_btn" to="." method="_on_control_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/credits_btn" to="." method="_on_credits_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/quit_btn" to="." method="_on_quit_btn_pressed"]

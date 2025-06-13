@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://0khxsnf2kqov"]
+[gd_scene load_steps=16 format=4 uid="uid://0khxsnf2kqov"]
 
 [ext_resource type="Script" uid="uid://bhhtgrdr3deox" path="res://scripts/mansao_1.gd" id="1_kn1d6"]
 [ext_resource type="Texture2D" uid="uid://cmms6g04al2fk" path="res://assets/sprites/Dungeon Tile Set.png" id="1_y1d5r"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://c873g2ny0xvtw" path="res://Entities/door.tscn" id="9_vytog"]
 [ext_resource type="PackedScene" uid="uid://bbfaq75khek8d" path="res://Entities/lever.tscn" id="10_movj1"]
 [ext_resource type="Script" uid="uid://b87pwdtkytm2i" path="res://scripts/falamansao1.gd" id="11_movj1"]
-[ext_resource type="AudioStream" uid="uid://jegg5fubloeb" path="res://Jeremy Blake - Powerup! ♫ NO COPYRIGHT 8-bit Music.mp3" id="12_ff6ib"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqlon"]
 texture = ExtResource("1_y1d5r")
@@ -164,7 +163,7 @@ metadata/_edit_horizontal_guides_ = [225.0, 225.0]
 metadata/_edit_vertical_guides_ = [976.0]
 
 [node name="Camera" parent="." instance=ExtResource("2_yqlon")]
-zoom = Vector2(1.7, 1.7)
+zoom = Vector2(3.4, 3.4)
 limit_left = -15
 limit_top = 0
 limit_right = 976
@@ -227,11 +226,6 @@ shape = SubResource("RectangleShape2D_ff6ib")
 debug_color = Color(0.633726, 0.526622, 0.0958235, 0.42)
 
 [node name="HUD" type="CanvasLayer" parent="Fala"]
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("12_ff6ib")
-autoplay = true
-attenuation = 1e-05
 
 [connection signal="is_Active" from="Lever" to="Door" method="_on_lever_is_active"]
 [connection signal="body_entered" from="Fala" to="Fala" method="_on_body_entered"]

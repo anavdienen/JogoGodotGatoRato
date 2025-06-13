@@ -1,0 +1,97 @@
+[gd_scene load_steps=9 format=3 uid="uid://bgf1f1y5uqsu8"]
+
+[ext_resource type="Script" uid="uid://b5p6glaakkk0u" path="res://scripts/credits.gd" id="1_7imj7"]
+[ext_resource type="Texture2D" uid="uid://ww0inutkgga5" path="res://assets/sprites/Pale/City2_pale.png" id="1_eb0o7"]
+[ext_resource type="FontFile" uid="uid://dti36eplljcie" path="res://dialog/fonts/futile-pro-v1/FutilePro.woff" id="3_0ctdu"]
+
+[sub_resource type="Theme" id="Theme_g3un8"]
+TextEdit/font_sizes/font_size = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r4a2s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f08fx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vm7g3"]
+
+[sub_resource type="Theme" id="Theme_fo32p"]
+TextEdit/font_sizes/font_size = 51
+TextEdit/styles/focus = SubResource("StyleBoxEmpty_r4a2s")
+TextEdit/styles/normal = SubResource("StyleBoxEmpty_f08fx")
+TextEdit/styles/read_only = SubResource("StyleBoxEmpty_vm7g3")
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7imj7")
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_eb0o7")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.342882
+anchor_top = 0.467593
+anchor_right = 0.657118
+anchor_bottom = 0.736111
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="menu_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "MAIN MENU"
+
+[node name="playAgain_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "PLAY AGAIN"
+
+[node name="Nomes" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 462.0
+offset_top = 178.0
+offset_right = 685.0
+offset_bottom = 327.0
+theme = SubResource("Theme_g3un8")
+theme_override_constants/outline_size = 0
+text = "Criadores:
+Ana Clara Van Dienen
+João Gabriel Boese
+Matheus Ziem
+"
+
+[node name="Titulo" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -114.0
+offset_top = 111.0
+offset_right = 132.0
+offset_bottom = 181.0
+grow_horizontal = 2
+theme = SubResource("Theme_fo32p")
+theme_override_fonts/font = ExtResource("3_0ctdu")
+theme_override_font_sizes/font_size = 50
+text = "Créditos:"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/menu_btn" to="." method="_on_menu_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/playAgain_btn" to="." method="_on_play_again_btn_pressed"]

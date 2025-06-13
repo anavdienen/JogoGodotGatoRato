@@ -36,7 +36,7 @@ var dialog_data_cutscene := {
 	},
 	4: {
 		"faceset": "res://dialog/imagens/rat.png", 
-		"dialog": "A-algo se moveu lá fora! Não estamos seguros aqui!",
+		"dialog": "Parece que alguma coisa está acontecendo, não estamos seguros!",
 		"title": "Rato"
 	},
 	5: {

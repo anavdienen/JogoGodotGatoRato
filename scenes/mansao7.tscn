@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=4 uid="uid://cjaj4u88to3gi"]
+[gd_scene load_steps=15 format=4 uid="uid://cjaj4u88to3gi"]
 
 [ext_resource type="Script" uid="uid://dqo86rvohlnv7" path="res://scripts/mansao_7.gd" id="1_jns01"]
 [ext_resource type="PackedScene" uid="uid://cj7xsqbxpokj5" path="res://Entities/camera.tscn" id="2_og8tp"]
+[ext_resource type="Script" uid="uid://ban81yhepabvq" path="res://scripts/camera_shake3.gd" id="3_ipvtj"]
 [ext_resource type="Texture2D" uid="uid://cmms6g04al2fk" path="res://assets/sprites/Dungeon Tile Set.png" id="3_rly0j"]
 [ext_resource type="TileSet" uid="uid://dym2ycg4snntr" path="res://scenes/mansao1.tres" id="4_kgap7"]
 [ext_resource type="TileSet" uid="uid://pvfw1jkk3n5w" path="res://scenes/props.tres" id="5_88k4n"]
@@ -160,11 +161,13 @@ metadata/_edit_vertical_guides_ = [976.0, 875.0]
 
 [node name="Camera" parent="." instance=ExtResource("2_og8tp")]
 position = Vector2(836, 63)
-zoom = Vector2(1.7, 1.7)
+zoom = Vector2(3.4, 3.4)
 limit_left = -15
 limit_top = 0
 limit_right = 976
 limit_bottom = 225
+script = ExtResource("3_ipvtj")
+target_group_name = "Player"
 
 [node name="BG" type="TileMapLayer" parent="."]
 light_mask = 5

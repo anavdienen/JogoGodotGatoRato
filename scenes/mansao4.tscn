@@ -380,7 +380,7 @@ cat_node = NodePath("../Cat")
 position = Vector2(46, -16)
 
 [node name="Camera" parent="." instance=ExtResource("3_1up36")]
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(3, 3)
 limit_left = -175
 limit_top = -65
 limit_right = 304

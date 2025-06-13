@@ -1,14 +1,17 @@
-[gd_scene load_steps=8 format=4 uid="uid://by6l8qakq6c2f"]
+[gd_scene load_steps=10 format=4 uid="uid://by6l8qakq6c2f"]
 
+[ext_resource type="Script" uid="uid://dh34ns4nu28pt" path="res://scripts/mansao_6.gd" id="1_786nc"]
 [ext_resource type="TileSet" uid="uid://dym2ycg4snntr" path="res://scenes/mansao1.tres" id="1_vmkoi"]
 [ext_resource type="TileSet" uid="uid://pvfw1jkk3n5w" path="res://scenes/props.tres" id="2_786nc"]
 [ext_resource type="PackedScene" uid="uid://bcrpbh5if3f6p" path="res://Entities/cat.tscn" id="3_fana0"]
 [ext_resource type="PackedScene" uid="uid://cj7xsqbxpokj5" path="res://Entities/camera.tscn" id="4_h0fdo"]
 [ext_resource type="PackedScene" uid="uid://vkr77vhufqtx" path="res://Entities/rat1.tscn" id="5_qt4b5"]
+[ext_resource type="Script" uid="uid://dbvynjg3gbog5" path="res://scripts/camera_shake2.gd" id="6_fana0"]
 [ext_resource type="PackedScene" uid="uid://c873g2ny0xvtw" path="res://Entities/door.tscn" id="6_jjw7c"]
 [ext_resource type="PackedScene" uid="uid://bbfaq75khek8d" path="res://Entities/lever.tscn" id="7_dln86"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_786nc")
 metadata/_edit_horizontal_guides_ = [80.0, -240.0]
 metadata/_edit_vertical_guides_ = [-47.0]
 
@@ -28,11 +31,13 @@ tile_set = ExtResource("2_786nc")
 position = Vector2(64, -161)
 
 [node name="Camera" parent="." instance=ExtResource("4_h0fdo")]
-zoom = Vector2(1.4, 1.4)
+zoom = Vector2(2.8, 2.8)
 limit_left = -47
 limit_top = -250
 limit_right = 465
 limit_bottom = 80
+script = ExtResource("6_fana0")
+target_group_name = "Player"
 
 [node name="Rat1" parent="." instance=ExtResource("5_qt4b5")]
 position = Vector2(94, -163)

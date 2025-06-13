@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://bbobtati4mj2o"]
+[gd_scene load_steps=11 format=4 uid="uid://bbobtati4mj2o"]
 
 [ext_resource type="Script" uid="uid://cakroekkj617w" path="res://scripts/mansao5.gd" id="1_73c1p"]
 [ext_resource type="TileSet" uid="uid://dym2ycg4snntr" path="res://scenes/mansao1.tres" id="2_voxr6"]
 [ext_resource type="PackedScene" uid="uid://bcrpbh5if3f6p" path="res://Entities/cat.tscn" id="3_snxqj"]
 [ext_resource type="PackedScene" uid="uid://cj7xsqbxpokj5" path="res://Entities/camera.tscn" id="4_ijbwv"]
 [ext_resource type="PackedScene" uid="uid://vkr77vhufqtx" path="res://Entities/rat1.tscn" id="5_sgo8g"]
+[ext_resource type="Script" uid="uid://gjnmdwyqinly" path="res://scripts/camera_shake1.gd" id="5_voxr6"]
 [ext_resource type="PackedScene" uid="uid://d316xmv0qw4dv" path="res://Entities/danger_zone.tscn" id="6_j1pqc"]
 [ext_resource type="PackedScene" uid="uid://bbfaq75khek8d" path="res://Entities/lever.tscn" id="7_1cb3k"]
 [ext_resource type="PackedScene" uid="uid://c873g2ny0xvtw" path="res://Entities/door.tscn" id="8_u767w"]
@@ -34,11 +35,13 @@ tile_set = ExtResource("2_voxr6")
 position = Vector2(-56, 127)
 
 [node name="Camera" parent="." instance=ExtResource("4_ijbwv")]
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(3, 3)
 limit_left = -111
 limit_top = -47
 limit_right = 800
 limit_bottom = 319
+script = ExtResource("5_voxr6")
+target_group_name = "Player"
 
 [node name="Rat1" parent="." instance=ExtResource("5_sgo8g")]
 position = Vector2(-25, 127)
